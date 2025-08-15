@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Good Neighbour Espresso Bar</title>
+  <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+
+ <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="The Good Neighbour Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h4>Locally-Owned Coffee Shop in Toronto</h4>
+      <h1>Brewing Comfort & Great Coffee in the Heart of Roncesvalles</h1>
+      <p>With exposed brick walls and warm aromas, <strong>The Good Neighbour Espresso Bar</strong> is your local spot for <strong>community</strong>, <strong>conversation</strong>, and <strong>coffee</strong>.</p>
+      <p><strong>Open 9am – 5pm, Monday–Sunday</strong></p>
+      <div class="buttons">
+        <a href="#order" class="btn">Visit Us →</a>
+        <a href="#menu" class="btn btn-primary">Our Menu →</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Chai_latte_with_cinnamon.jpg" alt="Chai Latte">
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="info-section" id="info">
+    <div class="info-card">
+      <h2>★★★★★</h2>
+      <p>Rated 5 Stars</p>
+    </div>
+    <div class="info-card">
+      <h2>Open Hours</h2>
+      <p>Mon–Sun: 8am – 6pm</p>
+    </div>
+    <div class="info-card">
+      <h2>Family Run</h2>
+      <p>Serving with love since 2009</p>
+    </div>
+  </section>
+  
+  <!-- PARTNERSHIP SECTION -->
+<section class="partnership">
+  <div class="partnership-text">
+    <h4>Baked Goods, Pastries, & Sandwiches</h4>
+    <h1>Better Together: The Good Neighbour × Hunny Bunny’s Bakery</h1>
+    <p>Every pastry we serve is handcrafted by Hunny Bunny Bakery, a local gem we’re proud to support. 
+    It’s a sweet partnership that supports local business and builds up Roncesvalles—one bite at a time. 
+    It’s more than a treat — it’s a taste of Toronto’s small business spirit, made fresh just for you.</p>
+    <a href="#order" class="btn btn-primary">Order Now →</a>
+  </div>
+  <div class="partnership-image">
+    <img src="latte-art.png" alt="Blueberry Muffin">
+  </div>
+</section>
+
+  <script>
+    const hero = document.getElementById("hero");
+    const infoSection = document.getElementById("info");
+
+    window.addEventListener("scroll", () => {
+      const scrollPos = window.scrollY;
+
+      // Fade out hero slightly on scroll
+      hero.style.opacity = 1 - scrollPos / 300;
+
+      // Fade in info section
+      const infoPos = infoSection.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (infoPos < windowHeight - 100) {
+        infoSection.classList.add("fade-in");
+      }
+    });
+	
+	//slide in inmage
+	
+	const partnershipImage = document.querySelector(".partnership-image");
+
+  window.addEventListener("scroll", () => {
+    const imagePos = partnershipImage.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (imagePos < windowHeight - 100) {
+      partnershipImage.classList.add("slide-in");
+    }
+  });
+  </script>
+</body>
+</html>
