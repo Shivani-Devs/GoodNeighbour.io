@@ -130,11 +130,15 @@
     .hero-image {
       flex: 1 1 400px;
       text-align: center;
+	   
     }
 
     .hero-image img {
       max-width: 100%;
       height: auto;
+	  border-radius: 15px;
+	  max-width: 90%;
+	  
     }
 
     /* Section 2 (info section) */
@@ -143,7 +147,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background-color: var(--coffee);
+      background-color: rgba(71, 30, 22, 1);
       color: var(--creme);
       opacity: 0;
       transform: translateY(40px);
@@ -199,6 +203,7 @@
       }
       .hero-image {
         margin-top: 20px;
+		 border-radius: 15px;
       }
       .info-section {
         flex-direction: column;
@@ -289,3 +294,98 @@
       margin-top: 20px;
     }
   }
+  
+  /*google maps */
+  
+  .location-section {
+    padding: 40px 10%;
+    background-color: var(--creme);
+    text-align: center;
+  }
+
+.location-section h2 {
+  color: var(--coffee);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.location-section p {
+  color: var(--burgundy);
+  margin-bottom: 20px;
+}
+
+#map {
+  height: 450px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease-out, transform 1.5s ease-out;
+}
+
+.map-section {
+    background-color: var(--white);
+    padding: 40px 10%;
+    text-align: center;
+  }
+  .map-section h2 {
+    color: var(--coffee);
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+#map.map-visible {
+    opacity: 1;
+    transform: scale(1);
+  
+  
+  
+  /* Scroll to Top Button */
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Distance from bottom */
+  right: 30px; /* Distance from right */
+  z-index: 99; /* Ensures it's on top of other content */
+  border: none;
+  outline: none;
+  background-color: #555; /* Example background color */
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #777; /* Hover effect */
+}
+
+
+/* Scroll Progress Bar Container */
+.scroll-indicator {
+  position: fixed;
+  right: 1.5rem;
+  top: 0;
+  height: 100vh; /* Full viewport height from top */
+  width: 0.25rem;
+  background: #000;
+  border-radius: 62.438rem;
+  z-index: 999;
+  overflow: hidden;
+}
+
+/* Scroll Progress Fill */
+.scroll-progress {
+  width: 100%;
+  height: 0%;
+  background: var(--dark-blue);
+  transition: height 0.2s ease-out;
+  border-radius: 62.438rem;
+}
+
+
