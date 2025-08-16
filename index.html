@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Good Neighbour Espresso Bar</title>
   <link rel="stylesheet" href="style.css" >
+  <link rel="icon" type="image/png" href="logo.jpg">
 </head>
 <body>
 
@@ -14,9 +15,9 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="#info-section">Home</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#visit">Visit Us</a></li>
+        <li><a href="https://www.google.com/maps/dir//The+Good+Neighbour+Espresso+Bar,+238+Annette+St,+Toronto,+ON+M6P+1R1/@43.6626089,-79.5535146,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x882b369e05cac3f9:0x286e11550139abc9!2m2!1d-79.4710832!2d43.6626026?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" ">Visit Us</a></li>
       </ul>
     </nav>
   </header>
@@ -29,12 +30,12 @@
       <p>With exposed brick walls and warm aromas, <strong>The Good Neighbour Espresso Bar</strong> is your local spot for <strong>community</strong>, <strong>conversation</strong>, and <strong>coffee</strong>.</p>
       <p><strong>Open 9am – 5pm, Monday–Sunday</strong></p>
       <div class="buttons">
-        <a href="#order" class="btn">Visit Us →</a>
+        <a href="https://www.google.com/maps/dir//The+Good+Neighbour+Espresso+Bar,+238+Annette+St,+Toronto,+ON+M6P+1R1/@43.6626089,-79.5535146,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x882b369e05cac3f9:0x286e11550139abc9!2m2!1d-79.4710832!2d43.6626026?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">Visit Us →</a>
         <a href="#menu" class="btn btn-primary">Our Menu →</a>
       </div>
     </div>
     <div class="hero-image">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Chai_latte_with_cinnamon.jpg" alt="Chai Latte">
+      <img src="store.png" alt="Chai Latte">
     </div>
   </section>
 
@@ -62,43 +63,34 @@
     <p>Every pastry we serve is handcrafted by Hunny Bunny Bakery, a local gem we’re proud to support. 
     It’s a sweet partnership that supports local business and builds up Roncesvalles—one bite at a time. 
     It’s more than a treat — it’s a taste of Toronto’s small business spirit, made fresh just for you.</p>
-    <a href="#order" class="btn btn-primary">Order Now →</a>
+    <a href="#order" class="btn btn-primary">Menu →</a>
   </div>
   <div class="partnership-image">
     <img src="latte-art.png" alt="Blueberry Muffin">
   </div>
 </section>
 
-  <script>
-    const hero = document.getElementById("hero");
-    const infoSection = document.getElementById("info");
+<!-- Location Section -->
 
-    window.addEventListener("scroll", () => {
-      const scrollPos = window.scrollY;
+<section class="location-section" id="location">
+  <h2>Find Us</h2>
+  <p>Come visit us in the heart of Roncesvalles, Toronto.</p>
+  <div id="map"></div>
+</section>
 
-      // Fade out hero slightly on scroll
-      hero.style.opacity = 1 - scrollPos / 300;
+<!-- Load Google Maps API -->
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAbo7elZL9ewjchVsm8QOYNaoidvoAoM4&callback=initMap">
+</script>
 
-      // Fade in info section
-      const infoPos = infoSection.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (infoPos < windowHeight - 100) {
-        infoSection.classList.add("fade-in");
-      }
-    });
-	
-	//slide in inmage
-	
-	const partnershipImage = document.querySelector(".partnership-image");
 
-  window.addEventListener("scroll", () => {
-    const imagePos = partnershipImage.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
 
-    if (imagePos < windowHeight - 100) {
-      partnershipImage.classList.add("slide-in");
-    }
-  });
-  </script>
+ <button id="scrollToTopBtn" title="Scroll to Top">
+  +
+</button>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+
