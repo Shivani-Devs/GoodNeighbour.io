@@ -170,7 +170,7 @@
     .info-card h2 {
       font-size: 1.8rem;
       margin-bottom: 10px;
-      color: var(white);
+      color: var(--white); /* fixed */
     }
 
     /* Animation */
@@ -341,7 +341,7 @@
 #map.map-visible {
     opacity: 1;
     transform: scale(1);
-  
+}
   
   
   /* Scroll to Top Button */
@@ -362,7 +362,7 @@
 }
 
 #scrollToTopBtn:hover {
-  background-color: #777; /* Hover effect */
+  background-color: rgb(84, 31, 19); /* Hover effect */
 }
 
 
@@ -387,5 +387,88 @@
   transition: height 0.2s ease-out;
   border-radius: 62.438rem;
 }
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #3b2c2a;   /* dark coffee */
+  color: #f5f5dc;              /* creme */
+  padding: 3rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+  margin: 1rem 0;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f5f5dc;
+}
+
+.footer a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #f5f5dc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #c0a98e; /* coffee highlight */
+}
+
+/* Footer Text */
+.footer p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  color: #f5f5dc;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-col {
+    margin: 1rem 0;
+  }
+
+  .footer a {
+    margin: 0.3rem 0;
+  }
+
+  .footer-logo {
+    margin: 0 auto 1rem;
+  }
+}
+
+
+
+
+
 
 
