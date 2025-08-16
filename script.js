@@ -84,3 +84,18 @@ function topFunction() {
     behavior: "smooth" // Smooth scroll effect
   });
 }
+
+
+// instagram images
+
+window.addEventListener('scroll', () => {
+      const section = document.querySelector('.instagram-section');
+      const text = document.querySelector('.instagram-text');
+      const sectionPosition = section.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.3;
+
+      if (sectionPosition < screenPosition) {
+        section.classList.add('active');
+        text.classList.add('active');
+      }
+    });
